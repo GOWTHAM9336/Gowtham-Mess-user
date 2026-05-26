@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMPK Hotel - Gowtham Mess</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginPage" class="login-container">
+    <div class="login-card">
+        <div class="logo">🍽️</div>
+        <h1>GMPK HOTEL</h1>
+        <p>Gowtham Mess - Authentic Taste</p>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button class="btn-primary" onclick="login()">Login</button>
+    </div>
+</div>
+
+<div id="mainSite" style="display:none;">
+
+   <header class="navbar">
+    <div class="nav-top">
+
+        <!-- LEFT LOGO + NAME -->
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="MGPK Logo" class="nav-logo">
+            <span class="brand">GOWTHAM MESS</span>
+        </div>
+
+        <!-- RIGHT ICONS -->
+        <div class="nav-icons">
+            <button class="icon-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-basket"></i>
+                <span id="cart-count" class="badge">0</span>
+            </button>
+            <button class="icon-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+
+    </div>
+</header>
+    <main>
+        <section id="home" class="hero-mobile">
+            <div class="hero-content">
+                <h2>Fresh. Traditional. Love.</h2>
+                <p>By P. Manimalan & M. Kalaivani</p>
+                <button class="btn-cta" onclick="scrollToMenu()">Order Now</button>
+            </div>
+        </section>
+
+        <div class="categories">
+            <div class="cat-pill">Breakfast</div>
+            <div class="cat-pill">Lunch</div>
+            <div class="cat-pill">Dinner</div>
+        </div>
+
+        <section id="menu" class="container">
+            <h2 class="section-title">Our Specialties</h2>
+            
+            <div class="menu-category">
+                <h3><i class="fas fa-sun"></i> Morning</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="item-info">
+                            <span class="item-name">Idli (2pcs)</span>
+                            <span class="item-price">₹30</span>
+                        </div>
+                        <button class="add-btn" onclick="addToCart('Idli', 30)">+</button>
+                    </div>
+                    <div class="menu-card">
+                        <div class="item-info">
+                            <span class="item-name">Ghee Dosa</span>
+                            <span class="item-price">₹50</span>
+                        </div>
+                        <button class="add-btn" onclick="addToCart('Dosa', 50)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3><i class="fas fa-utensils"></i> Afternoon</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="item-info">
+                            <span class="item-name">Chicken Biryani</span>
+                            <span class="item-price">₹180</span>
+                        </div>
+                        <button class="add-btn" onclick="addToCart('Chicken Biryani', 180)">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="container">
+            <div class="booking-card">
+                <h3>Reserve a Table</h3>
+                <form onsubmit="bookTable(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <div class="form-row">
+                        <input type="date" required>
+                        <input type="number" placeholder="Guests" required>
+                    </div>
+                    <button class="btn-primary">Book Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button onclick="toggleCart()">&times;</button>
+        </div>
+        <ul id="cart-items"></ul>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span>₹<span id="total">0</span></span>
+            </div>
+            <button class="btn-checkout" onclick="checkout()">Place Order</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
