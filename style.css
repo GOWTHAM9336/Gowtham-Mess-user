@@ -1955,3 +1955,206 @@ body{
     }
 
 }
+
+/* =========================
+   MOBILE RESPONSIVE UI
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+        padding:12px 15px;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .nav-top{
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .brand{
+        font-size:18px;
+    }
+
+    .nav-logo{
+        width:45px;
+        height:45px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    /* HERO */
+
+    .hero{
+        height:65vh;
+    }
+
+    .overlay h1{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .overlay p{
+        font-size:14px;
+        text-align:center;
+    }
+
+    .overlay button{
+        padding:12px 24px;
+        font-size:15px;
+    }
+
+    /* CATEGORY */
+
+    .category-section{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        padding:20px;
+    }
+
+    .category{
+        font-size:15px;
+        padding:14px;
+        text-align:center;
+    }
+
+    /* MENU */
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .card h4{
+        font-size:18px;
+    }
+
+    .card p{
+        font-size:16px;
+    }
+
+    .card button{
+        width:100%;
+    }
+
+    /* DELIVERY */
+
+    .delivery{
+        padding:20px;
+    }
+
+    .delivery form{
+        width:100%;
+    }
+
+    .delivery input,
+    .delivery textarea,
+    .delivery select{
+        width:100%;
+        font-size:15px;
+    }
+
+    /* CART */
+
+    .cart{
+        width:100%;
+    }
+
+    .cart-footer button{
+        width:100%;
+        margin-top:10px;
+    }
+
+    /* BILL POPUP */
+
+    .bill-box{
+        width:95%;
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .bill-header h1{
+        font-size:24px;
+    }
+
+    .bill-table th,
+    .bill-table td{
+        font-size:13px;
+        padding:8px;
+    }
+
+    /* LOGIN */
+
+    .login-box{
+        width:90%;
+        padding:30px 20px;
+    }
+
+    .login-box h1{
+        font-size:28px;
+    }
+
+    .login-box input{
+        width:100%;
+    }
+
+    .login-box button{
+        width:100%;
+    }
+
+    /* SUCCESS POPUP */
+
+    .order-success-box,
+    .payment-success-box{
+        width:90%;
+        padding:25px;
+    }
+
+    .order-success-box h1,
+    .payment-success-box h1{
+        font-size:26px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+        width:95%;
+        padding:20px;
+    }
+
+    .contact-item{
+        font-size:14px;
+    }
+
+    /* MAP */
+
+    .map-container iframe{
+        height:250px;
+    }
+
+    /* PAYMENT */
+
+    .payment-main-title{
+        font-size:20px;
+    }
+
+    .upi-btn{
+        width:100%;
+    }
+
+}
