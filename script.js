@@ -538,3 +538,7 @@ function payWithPhonepe(){
     `phonepe://pay?pa=9080149926@ybl&pn=GowthamMess&am=${total}&cu=INR`;
 
 }
+
+function toggleCart() {
+    document.getElementById("cart").classList.toggle("active");
+}
