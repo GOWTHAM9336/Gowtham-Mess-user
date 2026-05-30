@@ -226,15 +226,21 @@ billItems.appendChild(paymentRow);
 
 function closeBill(){
 
-    document.getElementById("bill-popup").style.display =
-    "none";
+    document.getElementById("bill-popup").style.display = "none";
 
+    // Show Call & WhatsApp buttons again
+    document.querySelector(".floating-icons").style.display = "flex";
 }
 
 function printBill(){
 
+    // Hide buttons before printing
+    document.querySelector(".floating-icons").style.display = "none";
+
     window.print();
 
+    // Show buttons after printing
+    document.querySelector(".floating-icons").style.display = "flex";
 }
 
 function placeOrder(event){

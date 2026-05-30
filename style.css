@@ -674,7 +674,7 @@ body{
 
 .bill-table{
     width:100%;
-    border-collapse:collapse;
+ 
     margin-top:20px;
 }
 
@@ -2693,7 +2693,7 @@ footer{
     }
 
     .bill-table{
-        display:block;
+       
         overflow-x:auto;
     }
 }
@@ -2708,4 +2708,44 @@ footer{
 
 .menu-box.active{
     display:block;
+}
+
+@media print {
+
+    body *{
+        visibility:hidden;
+    }
+
+    #bill-popup,
+    #bill-popup *{
+        visibility:visible;
+    }
+
+    #bill-popup{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:auto;
+        background:white;
+    }
+
+    .bill-box{
+        width:100%;
+        max-height:none !important;
+        overflow:visible !important;
+        box-shadow:none !important;
+    }
+
+    .print-btn,
+    .close-btn,
+    .bill-close-icon,
+    .floating-icons{
+        display:none !important;
+    }
+
+    @page{
+        size:auto;
+        margin:10mm;
+    }
 }
