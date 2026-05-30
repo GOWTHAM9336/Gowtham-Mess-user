@@ -300,22 +300,7 @@ function closeBill(){
 
 /* LOGIN SYSTEM */
 
-window.onload = function(){
 
-    let savedUser =
-    localStorage.getItem("gowthamUser");
-
-    if(savedUser){
-
-        document.getElementById("login-popup")
-        .style.display = "none";
-
-        document.getElementById("user-name")
-        .innerText = savedUser;
-
-    }
-
-}
 
 function loginUser(){
 
@@ -539,3 +524,79 @@ function payWithPhonepe(){
 
 }
 
+function showMenu(category){
+
+    const menus = document.querySelectorAll('.menu-category');
+
+    menus.forEach(menu=>{
+        menu.style.display='none';
+    });
+
+    document.getElementById(category).style.display='block';
+
+    document.getElementById(category).scrollIntoView({
+        behavior:'smooth'
+    });
+}
+
+function showAllMenu(){
+
+    document.querySelectorAll('.menu-category')
+    .forEach(menu=>{
+        menu.style.display='block';
+    });
+
+    document.getElementById('menu').scrollIntoView({
+        behavior:'smooth'
+    });
+}
+
+
+
+
+// Show selected menu only
+function showMenu(menuId){
+
+    document.querySelectorAll(".menu-box").forEach(menu => {
+
+        menu.style.display = "none";
+
+    });
+
+    document.getElementById(menuId).style.display = "block";
+
+    document.getElementById(menuId).scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+}
+
+window.onload = function () {
+
+    // Auto Login
+
+    let savedUser = localStorage.getItem("gowthamUser");
+
+    if(savedUser){
+
+        document.getElementById("login-popup").style.display = "none";
+
+        document.getElementById("user-name").innerText = savedUser;
+
+    }else{
+
+        document.getElementById("login-popup").style.display = "flex";
+
+    }
+
+    // Hide all menu sections
+
+    document.querySelectorAll(".menu-box").forEach(menu => {
+
+        menu.style.display = "none";
+
+    });
+
+}
