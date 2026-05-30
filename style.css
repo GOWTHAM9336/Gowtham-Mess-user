@@ -2370,3 +2370,330 @@ body{
     border-radius:10px;
 
 }
+
+/* ===================================
+   MOBILE FIX UPDATE
+=================================== */
+
+/* REMOVE HORIZONTAL SCROLL */
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+/* ALL SECTIONS SAFE */
+
+section,
+div,
+header,
+footer{
+    max-width:100%;
+}
+
+/* NAVBAR FIX */
+
+.navbar{
+    width:100%;
+    overflow:hidden;
+}
+
+.nav-top{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:0;
+}
+
+.brand{
+    white-space:normal;
+    word-break:break-word;
+}
+
+/* USER + CART */
+
+.nav-icons{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex-shrink:0;
+}
+
+/* MAP FIX */
+
+.map-container{
+    width:100%;
+    max-width:100%;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.map-container iframe{
+    width:100%;
+    display:block;
+    border-radius:20px;
+}
+
+/* CONTACT SECTION */
+
+.contact-section{
+    overflow:hidden;
+}
+
+.contact-box{
+    width:100%;
+    max-width:100%;
+}
+
+/* FLOATING BUTTONS */
+
+.floating-icons{
+    position:fixed;
+    right:15px;
+    bottom:20px;
+    z-index:9999;
+}
+
+/* CART FIX */
+
+.cart{
+    overflow-x:hidden;
+}
+
+.cart-item{
+    width:100%;
+    overflow:hidden;
+}
+
+.cart-buttons{
+    flex-wrap:wrap;
+}
+
+/* PAYMENT FIX */
+
+.payment-options{
+    width:100%;
+}
+
+.payment-card{
+    box-sizing:border-box;
+}
+
+/* QR FIX */
+
+.qr-box img{
+    max-width:100%;
+    height:auto;
+}
+
+/* HERO FIX */
+
+.hero{
+    width:100%;
+}
+
+.overlay{
+    width:100%;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+    /* NAVBAR */
+
+    .navbar{
+        padding:10px;
+    }
+
+    .nav-top{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:5px;
+    }
+
+    .logo-container{
+        flex:1;
+        min-width:0;
+    }
+
+    .nav-logo{
+        width:45px;
+        height:45px;
+    }
+
+    .brand{
+        font-size:16px;
+        line-height:1.2;
+    }
+
+    /* REMOVE EXTRA LOGO */
+
+    .logo{
+        display:none;
+    }
+
+    /* USER BUTTON */
+
+    .user-btn{
+        max-width:120px;
+        padding:8px 10px;
+        font-size:14px;
+        overflow:hidden;
+    }
+
+    .user-btn span{
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+    }
+
+    /* CART + LOGOUT */
+
+    .cart-btn,
+    .logout-btn{
+        width:42px;
+        height:42px;
+        margin-left:3px;
+    }
+
+    /* HERO */
+
+    .hero{
+        height:65vh;
+    }
+
+    .overlay h1{
+        font-size:28px;
+        line-height:1.3;
+    }
+
+    .overlay p{
+        font-size:15px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .contact-item{
+        font-size:16px;
+    }
+
+    /* MAP */
+
+    .map-container{
+        width:100%;
+        margin-top:20px;
+    }
+
+    .map-container iframe{
+        height:250px;
+    }
+
+    /* CATEGORY */
+
+    .category-section{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .category{
+        width:100%;
+        font-size:15px;
+        padding:12px;
+    }
+
+    /* MENU */
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    /* DELIVERY */
+
+    .delivery{
+        width:95%;
+        padding:20px;
+    }
+
+    /* CART */
+
+    .cart{
+        width:100%;
+        max-width:100%;
+        border-radius:0;
+    }
+
+    .cart-header h3{
+        font-size:20px;
+    }
+
+    .cart-item h4{
+        font-size:18px;
+    }
+
+    .cart-item p{
+        font-size:15px;
+    }
+
+    .cart-buttons button{
+        width:45px;
+        height:45px;
+        font-size:20px;
+    }
+
+    /* PAYMENT */
+
+    .payment-options{
+        flex-direction:column;
+    }
+
+    .payment-card{
+        width:100%;
+    }
+
+    /* FLOAT BUTTONS */
+
+    .float-btn{
+        width:55px;
+        height:55px;
+        font-size:22px;
+    }
+
+    .floating-icons{
+        right:10px;
+        bottom:15px;
+    }
+
+    /* BILL */
+
+    .bill-box{
+        width:95%;
+        padding:15px;
+    }
+
+    .bill-table{
+        display:block;
+        overflow-x:auto;
+    }
+}
