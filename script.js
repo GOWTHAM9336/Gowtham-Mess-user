@@ -333,6 +333,8 @@ function loginUser(){
     document.getElementById("login-popup")
     .style.display = "none";
 
+    document.getElementById("floating-icons").style.display = "flex";
+
     alert("Login Success");
 
 }
@@ -344,6 +346,8 @@ function logoutUser(){
     localStorage.removeItem("gowthamUser");
 
     localStorage.removeItem("gowthamPass");
+    document.getElementById("floating-icons")
+.style.display = "none";
 
     alert("Logged Out");
 
@@ -573,10 +577,14 @@ function showMenu(menuId){
 
 }
 
-window.onload = function () {
+window.onload = function(){
 
-    // Auto Login
+    // Hide all menus
+    document.querySelectorAll(".menu-box").forEach(menu => {
+        menu.style.display = "none";
+    });
 
+    // Check saved login
     let savedUser = localStorage.getItem("gowthamUser");
 
     if(savedUser){
@@ -585,18 +593,7 @@ window.onload = function () {
 
         document.getElementById("user-name").innerText = savedUser;
 
-    }else{
-
-        document.getElementById("login-popup").style.display = "flex";
-
+        // Show floating buttons
+        document.getElementById("floating-icons").style.display = "flex";
     }
-
-    // Hide all menu sections
-
-    document.querySelectorAll(".menu-box").forEach(menu => {
-
-        menu.style.display = "none";
-
-    });
-
 }
